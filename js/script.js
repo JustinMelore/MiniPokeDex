@@ -257,6 +257,12 @@ function loadPokemon() {
       stats.appendChild(stat);
     }
     document.body.appendChild(stats);
+
+    //Creates a section that holds all of the pokemon's moves
+    document.body.appendChild(createElement("h2",[],"Moves"));
+    const moves = document.createElement("section");
+    for(let i of jsonPokemon["abilities"]) moves.appendChild(createElement("div",[],`${i["name"].toUpperCase()}`));
+    document.body.appendChild(moves);
 }
 
 //Function that creates a DOM element to be added to the page
