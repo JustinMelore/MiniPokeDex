@@ -220,7 +220,49 @@ const pokemon = new Map([
 document.addEventListener("DOMContentLoaded",loadPokemon);
 
 //Function that loads up the information for the pokemon
-let loadPokemon = () => {
-    const jsonPokemon = JSON.parse(pokemon.get(this.title));
+function loadPokemon() {
+    const jsonPokemon = JSON.parse(pokemon.get(this.title.toLowerCase()));
     
+    //Creates the page title and image
+    document.body.appendChild(createElement("h1",[],jsonPokemon["name"].toUpperCase()));
+    const image = document.createElement("img");
+    image.setAttribute("src",`images/${this.title.toLowerCase()}.jpg`);
+    document.body.appendChild(image);
+
+    //Creates a section that holds the pokemon types
+    document.body.appendChild(createElement("h2",[],"Type(s)"));
+    const types = document.createElement("section");
+    for(let i of jsonPokemon["types"]) types.appendChild(createElement("div",[],i["type"]["name"].toUpperCase()));
+    document.body.appendChild(types);
+
+    //Creates a section that holds the pokemon's characterisitcs (weight, height, base xp, etc.)
+    document.body.appendChild(createElement("h2",[],"Characteristics"));
+    const characterisitcs = document.createElement("section");
+    characterisitcs.appendChild(createElement("div",[],`Weight: ${jsonPokemon["weight"]}`));
+    characterisitcs.appendChild(createElement("div",[],`Height: ${jsonPokemon["height"]}`));
+    characterisitcs.appendChild(createElement("div",[],`Base Experience: ${jsonPokemon["base_experience"]}`));
+    characterisitcs.appendChild(createElement("div",[],`Is Default: ${jsonPokemon["is_default"]}`));
+    characterisitcs.appendChild(createElement("div",[],`ID: ${jsonPokemon["id"]}`));
+    characterisitcs.appendChild(createElement("div",[],`Order: ${jsonPokemon["order"]}`));
+    document.body.appendChild(characterisitcs);
+
+    //Creates a sections that holds all of the pokemon's base stats
+    document.body.appendChild(createElement("h2",[],"Base Stats"));
+    const stats = document.createElement("section");
+    for(let i of jsonPokemon["stats"]) {
+      const stat = document.createElement("div");
+      stat.appendChild(createElement("p",[],`Name: ${i["stat"]["name"].toUpperCase()}`));
+      stat.appendChild(createElement("p",[],`Base Stat: ${i["base_stat"]}`));
+      stat.appendChild(createElement("p",[],`Effort: ${i["effort"]}`));
+      stats.appendChild(stat);
+    }
+    document.body.appendChild(stats);
+}
+
+//Function that creates a DOM element to be added to the page
+let createElement = (elementType, classList, text) => {
+  const element = document.createElement(elementType);
+  for(let i of classList) element.classList.add(i);
+  element.textContent = text;
+  return element;
 }
