@@ -1,0 +1,31 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #ddac6d;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #e25e20;
+}
+
+h1:hover {
+  color: #e25e20;
+  text-shadow: 2px 2px white;
+}
+
+.imgFlex {
+  margin-top: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cardStyle {
+  border: 2px solid white;
+  padding: 4em 2em 3em;
+}
+/*# sourceMappingURL=main.css.map */
