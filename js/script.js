@@ -224,19 +224,19 @@ function loadPokemon() {
     const jsonPokemon = JSON.parse(pokemon.get(this.title.toLowerCase()));
     
     //Creates the page title and image
-    document.body.appendChild(createElement("h1",[],jsonPokemon["name"].toUpperCase()));
+    document.getElementById("cardStats").appendChild(createElement("h1","pokeName",jsonPokemon["name"].toUpperCase()));
     const image = document.createElement("img");
     image.setAttribute("src",`images/${this.title.toLowerCase()}.png`);
-    document.body.appendChild(image);
+    document.getElementById("cardStats").appendChild(image);
 
     //Creates a section that holds the pokemon types
-    document.body.appendChild(createElement("h2",[],"Type(s)"));
+    document.getElementById("cardStats").appendChild(createElement("h2",[],"Type(s)"));
     const types = document.createElement("section");
     for(let i of jsonPokemon["types"]) types.appendChild(createElement("div",[],i["type"]["name"].toUpperCase()));
-    document.body.appendChild(types);
+    document.getElementById("cardStats").appendChild(types);
 
     //Creates a section that holds the pokemon's characterisitcs (weight, height, base xp, etc.)
-    document.body.appendChild(createElement("h2",[],"Characteristics"));
+    document.getElementById("cardStats").appendChild(createElement("h2",[],"Characteristics"));
     const characterisitcs = document.createElement("section");
     characterisitcs.appendChild(createElement("div",[],`Weight: ${jsonPokemon["weight"]}`));
     characterisitcs.appendChild(createElement("div",[],`Height: ${jsonPokemon["height"]}`));
@@ -244,25 +244,25 @@ function loadPokemon() {
     characterisitcs.appendChild(createElement("div",[],`Is Default: ${jsonPokemon["is_default"]}`));
     characterisitcs.appendChild(createElement("div",[],`ID: ${jsonPokemon["id"]}`));
     characterisitcs.appendChild(createElement("div",[],`Order: ${jsonPokemon["order"]}`));
-    document.body.appendChild(characterisitcs);
+    document.getElementById("cardStats").appendChild(characterisitcs);
 
     //Creates a sections that holds all of the pokemon's base stats
-    document.body.appendChild(createElement("h2",[],"Base Stats"));
+    document.getElementById("cardStats").appendChild(createElement("h2",[],"Base Stats"));
     const stats = document.createElement("section");
     for(let i of jsonPokemon["stats"]) {
       const stat = document.createElement("div");
-      stat.appendChild(createElement("p",[],`Name: ${i["stat"]["name"].toUpperCase()}`));
+      stat.appendChild(createElement("p",[],`${i["stat"]["name"].toUpperCase()}`));
       stat.appendChild(createElement("p",[],`Base Stat: ${i["base_stat"]}`));
       stat.appendChild(createElement("p",[],`Effort: ${i["effort"]}`));
       stats.appendChild(stat);
     }
-    document.body.appendChild(stats);
+    document.getElementById("cardStats").appendChild(stats);
 
     //Creates a section that holds all of the pokemon's moves
-    document.body.appendChild(createElement("h2",[],"Moves"));
+    document.getElementById("cardStats").appendChild(createElement("h2",[],"Moves"));
     const moves = document.createElement("section");
     for(let i of jsonPokemon["abilities"]) moves.appendChild(createElement("div",[],`${i["name"].toUpperCase()}`));
-    document.body.appendChild(moves);
+    document.getElementById("cardStats").appendChild(moves);
 }
 
 //Function that creates a DOM element to be added to the page
