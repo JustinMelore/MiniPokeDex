@@ -1,7 +1,46 @@
+.cardStyle {
+  border-radius: 7px;
+  background-color: white;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  perspective: 1000px;
+}
+
+.innerCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.card:hover .innerCard {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the back side */
+.back {
+  transform: rotateY(180deg);
+}
+
 body {
-  font-family: "Press Start 2P", cursive;
+  font-family: 'Press Start 2P', cursive;
   background-image: url("../images/back5.webp");
-  background-color: rgb(138, 221, 173);
+  background-color: #8addad;
   background-size: cover;
 }
 
@@ -9,20 +48,18 @@ h1 {
   margin-top: 17.6vh;
   margin-bottom: 2.6em;
   text-align: center;
-  color: rgb(226, 94, 32);
+  color: #e25e20;
   margin-left: 1em;
   text-shadow: 2px 2px white;
 }
+
 h1:hover {
   color: white;
-  text-shadow: 2px 2px rgb(226, 94, 32);
+  text-shadow: 2px 2px #e25e20;
 }
 
 .imgFlex {
   display: flex;
   justify-content: space-evenly;
 }
-
-.cardStyle {
-  border-radius: 7px;
-}/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map */

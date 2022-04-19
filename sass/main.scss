@@ -1,32 +1,26 @@
-$redorange:rgb(226, 94, 32);
-body{
-    // font-family: 'Luckiest Guy', cursive;
-font-family: 'Press Start 2P', cursive;
-background-image: url("../images/back5.webp");
-background-color:rgb(138, 221, 173);
-background-size: cover;
-
+@import 'partials/_card.scss';
+$redorange: rgb(226, 94, 32);
+body {
+  // font-family: 'Luckiest Guy', cursive;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('../images/back5.webp');
+  background-color: rgb(138, 221, 173);
+  background-size: cover;
 }
 
-h1{
-    margin-top: 17.6vh;
-    margin-bottom: 2.6em;
-    text-align: center;
-    color:$redorange;
-    margin-left: 1em;
-    text-shadow:2px 2px white;
-    &:hover{
-        color:white;
-        text-shadow:2px 2px $redorange;
-    }
+h1 {
+  margin-top: 17.6vh;
+  margin-bottom: 2.6em;
+  text-align: center;
+  color: $redorange;
+  margin-left: 1em;
+  text-shadow: 2px 2px white;
+  &:hover {
+    color: white;
+    text-shadow: 2px 2px $redorange;
+  }
 }
-.imgFlex{
-
-    display: flex;
-    justify-content:space-evenly;
-   
-}
-.cardStyle{
-    border-radius: 7px;
-  
+.imgFlex {
+  display: flex;
+  justify-content: space-evenly;
 }
