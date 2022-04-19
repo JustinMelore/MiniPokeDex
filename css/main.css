@@ -1,0 +1,28 @@
+body {
+  font-family: "Press Start 2P", cursive;
+  background-image: url("../images/back5.webp");
+  background-color: rgb(138, 221, 173);
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 17.6vh;
+  margin-bottom: 2.6em;
+  text-align: center;
+  color: rgb(226, 94, 32);
+  margin-left: 1em;
+  text-shadow: 2px 2px white;
+}
+h1:hover {
+  color: white;
+  text-shadow: 2px 2px rgb(226, 94, 32);
+}
+
+.imgFlex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cardStyle {
+  border-radius: 7px;
+}/*# sourceMappingURL=main.css.map */
