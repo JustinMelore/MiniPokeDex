@@ -16,7 +16,7 @@ a{
 }
 #cardStats{
     background: linear-gradient(150deg, rgba(233,191,99,1) 0%, rgba(242,150,61,1) 64%, rgba(231,98,28,1) 100%);
-    width: 35vw;
+    width:31vw;
     height: min-content;
     padding: 1em;
     margin-left: 33%;
@@ -29,10 +29,10 @@ a{
     flex-direction: column;
     img{
       border-radius: .7em;
-      // margin-left: 2.9em;
+   
       padding: 1em;
-      background-color: skyblue;
-      width: 20em;
+      background-color:skyblue;
+      width: 16em;
       padding-left: 10em;
       padding-right: 10em;
       border: 4px solid white;
@@ -72,3 +72,7 @@ section{
   border-radius: .7em;
 }
     
+.char{
+letter-spacing: 2px;
+padding: 4.5px;
+}

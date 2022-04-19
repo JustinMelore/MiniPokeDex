@@ -238,12 +238,12 @@ function loadPokemon() {
     //Creates a section that holds the pokemon's characterisitcs (weight, height, base xp, etc.)
     document.getElementById("cardStats").appendChild(createElement("h2",[],"Characteristics"));
     const characterisitcs = document.createElement("section");
-    characterisitcs.appendChild(createElement("div",[],`Weight: ${jsonPokemon["weight"]}`));
-    characterisitcs.appendChild(createElement("div",[],`Height: ${jsonPokemon["height"]}`));
-    characterisitcs.appendChild(createElement("div",[],`Base Experience: ${jsonPokemon["base_experience"]}`));
-    characterisitcs.appendChild(createElement("div",[],`Is Default: ${jsonPokemon["is_default"]}`));
-    characterisitcs.appendChild(createElement("div",[],`ID: ${jsonPokemon["id"]}`));
-    characterisitcs.appendChild(createElement("div",[],`Order: ${jsonPokemon["order"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`Weight: ${jsonPokemon["weight"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`Height: ${jsonPokemon["height"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`Base Experience: ${jsonPokemon["base_experience"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`Is Default: ${jsonPokemon["is_default"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`ID: ${jsonPokemon["id"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`Order: ${jsonPokemon["order"]}`));
     document.getElementById("cardStats").appendChild(characterisitcs);
 
     //Creates a sections that holds all of the pokemon's base stats
