@@ -226,7 +226,7 @@ function loadPokemon() {
     //Creates the page title and image
     document.body.appendChild(createElement("h1",[],jsonPokemon["name"].toUpperCase()));
     const image = document.createElement("img");
-    image.setAttribute("src",`images/${this.title.toLowerCase()}.jpg`);
+    image.setAttribute("src",`images/${this.title.toLowerCase()}.png`);
     document.body.appendChild(image);
 
     //Creates a section that holds the pokemon types
