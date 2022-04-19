@@ -1,6 +1,6 @@
 body {
   font-family: 'Press Start 2P', cursive;
-  background-image: url("../images/back3.gif");
+  background-image: url("../images/back5.webp");
   background-color: #8addad;
   background-size: cover;
 }
@@ -10,7 +10,7 @@ h1 {
   margin-bottom: 2.6em;
   text-align: center;
   color: #e25e20;
-  margin-left: 1.2em;
+  margin-left: 1em;
   text-shadow: 2px 2px white;
 }
 
