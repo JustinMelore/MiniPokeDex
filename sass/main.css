@@ -1,21 +1,25 @@
 body {
   font-family: 'Press Start 2P', cursive;
-  background-color: #ddac6d;
+  background-image: url("../images/back3.gif");
+  background-color: #8addad;
+  background-size: cover;
 }
 
 h1 {
+  margin-top: 17.6vh;
+  margin-bottom: 2.6em;
   text-align: center;
+  color: #e25e20;
+  margin-left: 1.2em;
+  text-shadow: 2px 2px white;
+}
+
+h1:hover {
   color: white;
   text-shadow: 2px 2px #e25e20;
 }
 
-h1:hover {
-  color: #e25e20;
-  text-shadow: 2px 2px white;
-}
-
 .imgFlex {
-  margin-top: 25vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +29,6 @@ h1:hover {
 }
 
 .cardStyle {
-  border: 2px solid white;
-  padding: 4em 2em 3em;
+  border-radius: 7px;
 }
 /*# sourceMappingURL=main.css.map */
