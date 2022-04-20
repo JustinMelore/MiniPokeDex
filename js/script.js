@@ -238,12 +238,12 @@ function loadPokemon() {
     //Creates a section that holds the pokemon's characterisitcs (weight, height, base xp, etc.)
     document.getElementById("cardStats").appendChild(createElement("h2",[],"Characteristics"));
     const characterisitcs = document.createElement("section");
-    characterisitcs.appendChild(createElement("div",["char"],`Weight: ${jsonPokemon["weight"]}`));
-    characterisitcs.appendChild(createElement("div",["char"],`Height: ${jsonPokemon["height"]}`));
-    characterisitcs.appendChild(createElement("div",["char"],`Base Experience: ${jsonPokemon["base_experience"]}`));
-    characterisitcs.appendChild(createElement("div",["char"],`Is Default: ${jsonPokemon["is_default"]}`));
-    characterisitcs.appendChild(createElement("div",["char"],`ID: ${jsonPokemon["id"]}`));
-    characterisitcs.appendChild(createElement("div",["char"],`Order: ${jsonPokemon["order"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">Weight:</span> ${jsonPokemon["weight"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">Height:</span> ${jsonPokemon["height"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">Base Experience:</span> ${jsonPokemon["base_experience"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">Is Default:</span> ${jsonPokemon["is_default"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">ID:</span> ${jsonPokemon["id"]}`));
+    characterisitcs.appendChild(createElement("div",["char"],`<span class="charSpan">Order:</span> ${jsonPokemon["order"]}`));
     document.getElementById("cardStats").appendChild(characterisitcs);
 
     //Creates a sections that holds all of the pokemon's base stats
@@ -251,7 +251,7 @@ function loadPokemon() {
     const stats = document.createElement("section");
     for(let i of jsonPokemon["stats"]) {
       const stat = document.createElement("div");
-      stat.appendChild(createElement("p",[],`${i["stat"]["name"].toUpperCase()}`));
+      stat.appendChild(createElement("p",[],`<span>${i["stat"]["name"].toUpperCase()}</span>`));
       stat.appendChild(createElement("p",[],`Base Stat: ${i["base_stat"]}`));
       stat.appendChild(createElement("p",[],`Effort: ${i["effort"]}`));
       stats.appendChild(stat);
@@ -269,6 +269,6 @@ function loadPokemon() {
 let createElement = (elementType, classList, text) => {
   const element = document.createElement(elementType);
   for(let i of classList) element.classList.add(i);
-  element.textContent = text;
+  element.innerHTML = text;
   return element;
 }

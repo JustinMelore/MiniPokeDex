@@ -16,16 +16,16 @@ a:hover {
 
 #cardStats {
   background: linear-gradient(150deg, #e9bf63 0%, #f2963d 64%, #e7621c 100%);
-  width: 31vw;
+  width: 34.6vw;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
   padding: 1em;
-  margin-left: 33%;
+  margin-left: auto;
   margin-right: auto;
   border: 10px solid #f0df64;
   border-radius: 1em;
-  font-size: .6em;
+  font-size: .7em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,5 +91,14 @@ section {
 .char {
   letter-spacing: 2px;
   padding: 4.5px;
+}
+
+span {
+  font-weight: 600;
+  color: #2160b3;
+}
+
+.charSpan {
+  color: #205c20;
 }
 /*# sourceMappingURL=page.css.map */
